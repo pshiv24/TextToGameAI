@@ -6,6 +6,9 @@ https://github.com/pshiv24/TextToGameAI.git
 ## Go to the folder tect_to_image
 cd text_to_image
 
+## Install required libraries and modules
+pip install -r requirements.txt
+
 ## Make migrations
 python manage.py makemigrations
 python manage.py migrate
