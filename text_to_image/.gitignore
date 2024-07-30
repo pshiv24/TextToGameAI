@@ -1,0 +1,52 @@
+# Python-specific
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+*.pyd
+
+# Django-specific
+*.log
+*.sqlite3
+db.sqlite3
+media/
+static/
+*.env
+.env.*
+
+# Celery-related
+celerybeat-schedule
+celerybeat.pid
+
+# Redis-related
+*.rdb
+*.aof
+
+# Environment-specific
+venv/
+.env/
+ENV/
+.venv/
+.ENV/
+
+# System-specific
+.DS_Store
+Thumbs.db
+
+# IDEs and Editors
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# PyCharm
+.idea/
+*.iml
+
+# Jupyter Notebooks
+.ipynb_checkpoints/
+
+# Docker
+Dockerfile
+docker-compose.yml
+*.dockerignore
