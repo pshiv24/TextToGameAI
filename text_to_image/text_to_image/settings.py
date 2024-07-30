@@ -17,6 +17,20 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 from celery import Celery
 import os
+from pathlib import Path
+from dotenv import load_dotenv
+
+# Load environment variables from .env file
+BASE_DIR = Path(__file__).resolve().parent.parent
+dotenv_path = BASE_DIR / '.env'
+load_dotenv(dotenv_path=dotenv_path)
+
+# Use environment variables
+
+STABILITY_API_URL = os.getenv("STABILITY_API_URL")
+STABILITY_API_KEY = os.getenv("STABILITY_API_KEY")
+IMAGE_SAVE_PATH = os.getenv("IMAGE_SAVE_PATH")
+DEBUG = os.getenv('DEBUG', 'False') == 'True'
 
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'text_to_image.settings')
 

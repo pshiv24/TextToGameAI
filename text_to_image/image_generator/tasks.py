@@ -8,10 +8,12 @@ import base64
 from PIL import Image
 from io import BytesIO
 import os
+import os
 
-STABILITY_API_URL = "https://api.stability.ai/v1/generation/stable-diffusion-xl-1024-v1-0/text-to-image"
-STABILITY_API_KEY = "sk-AsI9wWV76rqWZkSfvjhtupKiexTOJNrGIV5V6hIVYJOyClGh"
-IMAGE_SAVE_PATH = "text_to_image/image_generator/Images"
+
+STABILITY_API_URL = os.getenv(STABILITY_API_URL)
+STABILITY_API_KEY = os.getenv(STABILITY_API_KEY)
+IMAGE_SAVE_PATH = os.getenv(IMAGE_SAVE_PATH)
 
 logger = logging.getLogger(__name__)
 
